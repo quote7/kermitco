@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // IFRAME
-const iframe_main = document.querySelector("#iframe_main");
-const url_input = document.querySelector("#url_main");
-document.querySelector("#submit_url").addEventListener("click", () => {
+let iframe_main = document.getElementById("iframe_main");
+let url_input = document.getElementById("url_main");
+document.getElementById("submit_url").addEventListener("click", () => {
     iframe_main.src = url_input.value;
 });
