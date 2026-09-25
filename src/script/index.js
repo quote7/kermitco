@@ -66,5 +66,13 @@ document.addEventListener("DOMContentLoaded", function() {
 let iframe_main = document.getElementById("iframe_main");
 let url_input = document.getElementById("url_main");
 document.getElementById("submit_url").addEventListener("click", () => {
-    iframe_main.src = url_input.value;
+    if (url_input.value.endsWith("?youtube")) {
+        iframe_main.src = "http://youtube-nocookie.com/embed/" + url_input.value;
+    }
+    else if (url_input.value.endsWith("?search")) {
+        iframe_main.src = "http://yep.com/web?q=" + url_input.value;
+    }
+    else {
+        iframe_main.src = url_input.value;
+    }
 });
