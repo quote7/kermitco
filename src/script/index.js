@@ -61,3 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Onload triggered.");
     firebase_initialize();
 });
+
+// IFRAME
+const iframe_main = document.querySelector("#iframe_main");
+const url_input = document.querySelector("#url_main");
+document.querySelector("#submit_url").addEventListener("click", () => {
+    iframe_main.src = url_input.value;
+});
